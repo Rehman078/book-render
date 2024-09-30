@@ -50,7 +50,7 @@ export const deleteBookById = async (req, res) => {
   try {
     const id = req.params.id;
     const book = await Book.findByIdAndDelete(id);
-    return httpResponse.SUCCESS(res, { message: 'Book retrieved successfully'})
+    return httpResponse.SUCCESS(res, { message: 'Book delete successfully'})
   } catch (error) {
     return httpResponse.BAD_REQUEST(res, error)
   }
